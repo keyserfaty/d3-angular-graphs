@@ -1,9 +1,36 @@
+<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Iamat</title>
+  <meta charset="utf-8">
+  <base href="/">
+  <title></title>
+  <link rel="stylesheet" href="libs/skeleton/skeleton.css">
+  <link rel="stylesheet" href="libs/skeleton/normalize.css">
+
 </head>
-<body>
-  <h1>Welcome!</h1>
+
+<body ng-app="GraphApp">
+
+  <section id="main" ng-controller="MainCtrl">
+    <div ng-include=" 'sections/header/header.html' "></div>
+    <section class="container">
+      <div ng-view></div>
+    </section>
+  </section>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="components/graphs/graphs.directives.js"></script>
+  <script src="components/graphs/graphs.services.js"></script>
+  <script src="partials/edad/edad.controller.js"></script>
+  <script src="partials/estadocivil/estadocivil.controller.js"></script>
+  <script src="partials/paises/paises.controller.js"></script>
+  <script src="partials/provincias/provincias.controller.js"></script>
+  <script src="sections/main/main.controller.js"></script>
+
 </body>
+
 </html>

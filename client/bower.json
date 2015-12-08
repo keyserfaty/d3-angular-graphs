@@ -1,0 +1,18 @@
+{
+  "name": "graphs",
+  "authors": [
+    "keyserfaty <keserfaty@gmail.com>"
+  ],
+  "description": "",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

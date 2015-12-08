@@ -4,13 +4,16 @@ const
 	express = require('express'),
 	app =  express(),
 	bodyParser = require('body-parser'),
+	path = require('path'),
 	morgan = require('morgan');
 
 const
 	config = require('./config'),
 	router = require('./routes'),
 	db = require('./db.js'),
-  services = require('./jobs');
+  jobs = require('./jobs');
+
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.use(morgan('dev'));
 

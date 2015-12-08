@@ -24,6 +24,8 @@ exports.parseTags = function () {
       if (data.hasOwnProperty('teams')) {
         teamsData.push(data.teams);
       }
+      
+      teamsData = teamsData[0];
 
       Object.keys(results.userTags).forEach(function (key) {
 
@@ -33,15 +35,16 @@ exports.parseTags = function () {
         temp.team = false;
 
         var name = key;
+        // console.log(name);
 
         if (key.indexOf("team-") > -1) {
           temp.team = true;
 
           var temp2 = key.replace("room:team-", "");
           for (var i = teamsData.length - 1; i >= 0; i--) {
+
             if (teamsData[i]._id == temp2) {
               name = teamsData[i].name;
-              // cool
               break;
             }
           };
