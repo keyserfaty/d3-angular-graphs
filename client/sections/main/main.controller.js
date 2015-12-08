@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('main.controller', [])
-  .controller('MainCtrl', ['$http', '$scope', '$location', function ($http, $scope, $location) {
+  .controller('MainCtrl', ['$http', '$scope', function ($http, $scope) {
 
     $http({
       method: 'GET',
