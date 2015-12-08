@@ -8,10 +8,12 @@ angular.module('graphs.directives', [])
       link: function (scope, element, attrs) {
         d3Service.d3().then(function (d3) {
 
+          var colors = d3.scale.category20();
+
           var width = 300,
             height = 300,
             radius = 120,
-            color = d3.scale.category20();
+            color = colors;
 
           var vis = d3.select(element[0])
             .append("svg:svg")
@@ -72,6 +74,16 @@ angular.module('graphs.directives', [])
               .text(function (d, i) {
                 return data[i].label;
               });
+
+            $('g.slice').tipsy({
+              gravity: 'w',
+              html: true,
+              title: function () {
+                var d = this.__data__,
+                num = d.data.percentage;
+                return d.data.label + ': ' + Math.round(num * 100) / 100 + '%';
+              }
+            });
 
           };
 
