@@ -10,8 +10,8 @@ const
 const
 	config = require('./config'),
 	router = require('./routes'),
-	db = require('./db.js'),
-  jobs = require('./jobs');
+	db = require('./db'),
+	job = require('./jobs');
 
 app.use(express.static(path.join(__dirname, '../client')));
 

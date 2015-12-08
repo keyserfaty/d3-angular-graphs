@@ -9,12 +9,10 @@ Some simple graphs made with d3 and Angular.js.
 > with [nvm](https://github.com/creationix/nvm).
 
  1. Clone repo.
- 2. Run `npm install` from root folder.
- 3. Run `bower install` from `client` folder.
- 4. Run `node app.js` from `server` folder.
+ 2. Run `npm install && bower install` from root folder.
+ 3. Run `npm start` to start app.
+ 4. Go to [http://localhost:3000/](http://localhost:3000/).
  5. That's it!
-
-> **Important/fix needed**: To fullfill the db for the first time you will need uncomment lines 26 to 31 from `server/jobs/index.js`.
 
 ----------
 
