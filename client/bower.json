@@ -8,6 +8,10 @@
   "moduleType": [],
   "license": "MIT",
   "private": true,
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-route": "1.4.8"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
